@@ -30,9 +30,4 @@ class Pion_bleu(py.sprite.Sprite):
             self.pions_bleus.remove(pion)
 
 
-    class Dame(Pion_bleu):
-    def __init__(self, x, y):
-        super().__init__(x, y)
-        self.image = py.image.load('asset/dame_bleue.png')   
-
-    py.quit()
+    

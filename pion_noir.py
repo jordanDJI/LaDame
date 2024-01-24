@@ -9,3 +9,21 @@ class Pion_noir(py.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = 110
         self.rect.y= 545
+
+    def deplacer_pion_noir(self, pion, direction):
+        if direction == "avant":
+            pion.rect.y -= pion.velocity
+        elif direction == "diagonale_gauche":
+            pion.rect.x -= pion.velocity
+            pion.rect.y -= pion.velocity
+        elif direction == "diagonale_droite":
+            pion.rect.x += pion.velocity
+            pion.rect.y -= pion.velocity
+
+    def promouvoir_en_dame(self, pion):
+        # Vérifier si le pion atteint la rangée la plus éloignée
+        if pion.rect.y <= 0:
+            # Remplacer le pion par une dame
+            nouvelle_dame = Dame(pion.rect.x, pion.rect.y)
+            self.pions_dames.add(nouvelle_dame)
+            self.pions_noir.remove(pion)

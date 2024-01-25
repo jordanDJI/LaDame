@@ -6,6 +6,7 @@ class Pion_bleu(py.sprite.Sprite):
         self.nbre_max_jeton=12
         self.velocity=5
         self.image = py.image.load('asset/pion_bleu.png')
+        self.position = (0,0)
         self.rect = self.image.get_rect()
         self.rect.x =16
         self.rect.y= 8

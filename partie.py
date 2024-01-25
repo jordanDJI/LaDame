@@ -64,3 +64,4 @@ class partie():
 #self1 = self()
 #self1.cree_les_pions(Pion_noir)    
 #print(self1)
+
